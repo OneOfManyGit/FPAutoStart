@@ -1,0 +1,18 @@
+FIR Filter for floating and fixed point 
+	key point : seperating data type specifications from algorithm code
+	allows:
+		re-using algorithm with different data types
+		keep algorithm clean
+		keep algorithm code more readable
+		switch between fixed point and floating point for comparison
+		switch between variations of fixed-point code with changing the algorithm code
+	y(n) = b(1)*x(n) + b(2)*x(n-1) + ... + b(end)*x(n-length(b)+1)
+	
+	realistic input tests:
+		impulses
+		sum of sinusoids
+		chirp
+		
+	use "fir1" from signal processing toolbox for generating coefficients
+	b = fir1(11,0.25)
+	
